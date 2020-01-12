@@ -1,6 +1,3 @@
-// server from server/api/index.js file.
-// SERVER FROM SERVER/API/INDEX>JS FILE
-const server = require("./api/server");
 // SERVER
 const server = express();
 // SERVER API
