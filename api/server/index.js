@@ -4,7 +4,7 @@ const server = express();
 // SERVER API
 server.get("/", (req, res) => {
   res.status(200).json({
-    message: "API TEST"
+    message: "API TEST A GO GO"
   });
 });
 
@@ -12,7 +12,7 @@ server.get("/", (req, res) => {
 server.use((err, req, res, next) => {
   console.log(err);
   res.status(500).json({
-    message: "API FAIL"
+    message: "API FAIL A NO NO"
   });
 });
 
