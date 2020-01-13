@@ -13,11 +13,6 @@ exports.up = async function(knex) {
     .createTable("instructions", table => {
       table.increments("id");
       table
-        .integer("instruction_number")
-        .unsigned()
-        .notNullable();
-      table.text("instructions").notNullable();
-      table
         .integer("recipe_id")
         .unsigned()
         .notNullable()
@@ -25,6 +20,11 @@ exports.up = async function(knex) {
         .inTable("recipes")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
+      table
+        .integer("instruction_number")
+        .unsigned()
+        .notNullable();
+      table.text("instructions").notNullable();
     })
     .createTable("carls_recipes", table => {
       table.increments();
