@@ -36,32 +36,48 @@ exports.seed = function(knex) {
         {
           recipe_id: 3,
           instruction_number: 2,
-          instructions: "sift flour and sugar and cocoa."
+          instructions: "sift flour,"
         },
         {
           recipe_id: 3,
           instruction_number: 3,
-          instructions: "combine milk, eggs, vanilla in separate container"
+          instructions: "sift sugar,"
         },
         {
           recipe_id: 3,
           instruction_number: 4,
+          instructions: "sift cocoa powder"
+        },
+        {
+          recipe_id: 3,
+          instruction_number: 5,
+          instructions: "add milk"
+        },
+        {
+          recipe_id: 3,
+          instruction_number: 6,
+          instructions: "add eggs,"
+        },
+        {
+          recipe_id: 3,
+          instruction_number: 7,
+          instructions: "add vanilla"
+        },
+        {
+          recipe_id: 3,
+          instruction_number: 8,
           instructions:
             "pinch of salt and mix wet and dry ingredients together with a whisk"
         },
         {
           recipe_id: 3,
-          instruction_number: 5,
-          instructions: "heat nonstick pan, coat generously with butter"
+          instruction_number: 9,
+          instructions:
+            "heat nonstick pan, coat generously with butter, add batter cook 30 seconds each side until done."
         },
         {
           recipe_id: 3,
-          instruction_number: 6,
-          instructions: "add batter cook 30 seconds each side until done."
-        },
-        {
-          recipe_id: 3,
-          instruction_number: 7,
+          instruction_number: 10,
           instructions: "serve with nutella and fresh fruit!"
         },
         { recipe_id: 4, instruction_number: 1, instructions: "warm chocolate" },
