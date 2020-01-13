@@ -13,24 +13,19 @@ exports.up = async function(knex) {
   await knex.schema.createTable("instructions", table => {
     table.increments("id");
     table
-      .string("recipe_id")
-      .unsigned()
+      .integer("recipe_id")
       .notNullable()
       .references("id")
       .inTable("recipes")
       .onUpdate("CASCADE")
       .onDelete("CASCADE");
-    table
-      .integer("instruction_number")
-      .unsigned()
-      .notNullable();
+    table.integer("instruction_number").notNullable();
     table.text("instructions").notNullable();
   });
 
   await knex.schema.createTable("carls_recipes", table => {
     table
       .integer("recipe_id")
-      .unsigned()
       .notNullable()
       .references("id")
       .inTable("recipes")
@@ -38,7 +33,6 @@ exports.up = async function(knex) {
       .onDelete("CASCADE");
     table
       .integer("ingredient_id")
-      .unsigned()
       .notNullable()
       .references("id")
       .inTable("ingredients")
