@@ -28,16 +28,16 @@ exports.up = async function(knex) {
       .integer("recipe_id")
       .notNullable()
       .references("id")
-      .inTable("recipes")
-      .onUpdate("CASCADE")
-      .onDelete("CASCADE");
+      .inTable("recipes");
+    //   .onUpdate("CASCADE")
+    //   .onDelete("CASCADE");
     table
       .integer("ingredient_id")
       .notNullable()
       .references("id")
-      .inTable("ingredients")
-      .onUpdate("CASCADE")
-      .onDelete("CASCADE");
+      .inTable("ingredients");
+    //   .onUpdate("CASCADE")
+    //   .onDelete("CASCADE");
     table.date("from");
     table.date("to");
     // reate a primary key as a combinaton of columns
