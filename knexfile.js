@@ -7,8 +7,7 @@ module.exports = {
     connection: {
       filename: "./data/recipes.sqlite3"
     },
-    // generates migration files in a data/migrations
-    mirgrations: {
+    migrations: {
       directory: "./data/migrations"
     },
     seeds: {
