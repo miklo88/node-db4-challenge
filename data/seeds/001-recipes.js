@@ -5,11 +5,11 @@ exports.seed = function(knex) {
     .then(function() {
       // Inserts seed entries
       return knex("recipes").insert([
-        { id: 1, name: "Chocolate Milk" },
-        { id: 2, name: "Chocolate Covered Strawberries" },
-        { id: 3, name: "Chocolate Crepes" },
-        { id: 4, name: "Chocolate Covered Peanuts" },
-        { id: 5, name: "Chocolate Covered Pretzels" }
+        { id: 1, recipe_name: "Chocolate Milk" },
+        { id: 2, recipe_name: "Chocolate Covered Strawberries" },
+        { id: 3, recipe_name: "Chocolate Crepes" },
+        { id: 4, recipe_name: "Chocolate Covered Peanuts" },
+        { id: 5, recipe_name: "Chocolate Covered Pretzels" }
       ]);
     });
 };
