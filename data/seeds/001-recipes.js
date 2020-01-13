@@ -15,10 +15,9 @@ exports.seed = function(knex, Promise) {
     .then(function() {
       // Inserts seed entries
       return knex("recipes").insert([
-        { id: 1, name: "recipeName", ingredients: "" },
-        { id: 2, name: "recipeName" },
-        { id: 3, name: "recipeName" }
-
+        // { id: 1, name: "recipeName", ingredients: "" },
+        // { id: 2, name: "recipeName" },
+        // { id: 3, name: "recipeName" }
         // {id: 2, colName: 'rowValue2'},
         // {id: 3, colName: 'rowValue3'}
       ]);
