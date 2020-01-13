@@ -1,10 +1,7 @@
 exports.seed = async knex => {
   // Deletes ALL existing entries
   await knex("carls_recipes").insert([
-    // { id: 1, name: "Chocolate Milk" },
-    { recipe_id: 1, ingredient_id: 1 },
-    { recipe_id: 1, ingredient_id: 2 },
-    { recipe_id: 1 },
+    { recipe_id: 1, ingredient_id: 1, ingredient_id: 2 },
 
     { recipe_id: 2, ingredient_id: 1 },
     { recipe_id: 2, ingredient_id: 3 },
