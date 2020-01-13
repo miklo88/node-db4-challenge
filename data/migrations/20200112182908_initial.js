@@ -1,7 +1,7 @@
 exports.up = async function(knex) {
   await knex.schema.createTable("recipes", table => {
     table.increments("id");
-    table.string("recipe_name").notNullable();
+    table.string("recipe_id").notNullable();
   });
 
   await knex.schema.createTable("ingredients", table => {
@@ -16,22 +16,20 @@ exports.up = async function(knex) {
       .integer("recipe_id")
       .notNullable()
       .references("id")
-      .inTable("recipes")
-      .onUpdate("CASCADE")
-      .onDelete("CASCADE");
-    table.integer("instruction_number").notNullable();
+      .inTable("recipes");
+    table.integer("instruction_id").notNullable();
     table.text("instructions").notNullable();
   });
 
   await knex.schema.createTable("carls_recipes", table => {
     table
       .string("recipe_id")
-      .notNullable();
+      .notNullable()
       .references("id")
       .inTable("recipes");
     table
       .string("ingredient_id")
-      .notNullable();
+      .notNullable()
       .references("id")
       .inTable("ingredients");
     // create a primary key as a combinaton of columns
