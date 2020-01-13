@@ -38,10 +38,10 @@ exports.up = async function(knex) {
       .inTable("ingredients");
     //   .onUpdate("CASCADE")
     //   .onDelete("CASCADE");
+    // create a primary key as a combinaton of columns
+    table.primary(["recipe_id", "ingredient_id"]);
     table.date("from");
     table.date("to");
-    // reate a primary key as a combinaton of columns
-    table.primary(["recipe_id", "ingredient_id"]);
   });
 };
 
