@@ -25,13 +25,13 @@ exports.up = async function(knex) {
 
   await knex.schema.createTable("carls_recipes", table => {
     table
-      .integer("recipe_id")
-      .notNullable()
+      .string("recipe_id")
+      .notNullable();
       .references("id")
       .inTable("recipes");
     table
-      .integer("ingredient_id")
-      .notNullable()
+      .string("ingredient_id")
+      .notNullable();
       .references("id")
       .inTable("ingredients");
     // create a primary key as a combinaton of columns
