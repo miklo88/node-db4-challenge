@@ -29,15 +29,11 @@ exports.up = async function(knex) {
       .notNullable()
       .references("id")
       .inTable("recipes");
-    //   .onUpdate("CASCADE")
-    //   .onDelete("CASCADE");
     table
       .integer("ingredient_id")
       .notNullable()
       .references("id")
       .inTable("ingredients");
-    //   .onUpdate("CASCADE")
-    //   .onDelete("CASCADE");
     // create a primary key as a combinaton of columns
     table.primary(["recipe_id", "ingredient_id"]);
     table.date("from");
