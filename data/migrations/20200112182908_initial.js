@@ -26,7 +26,7 @@ exports.up = async function(knex) {
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
     })
-    .createTable("carls-recipes", table => {
+    .createTable("carls_recipes", table => {
       table.increments();
       table.float("quantity").notNullable();
       table
